@@ -75,10 +75,28 @@ a{
 
 .bluebackground{
     padding: 5px;
-    background-color: #79C4DC;
+    /*background-color: #79C4DC;*/
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
+}
+
+
+.contactbackground{
+    padding: 5px;
+    background-color: #a679dc;
+    margin: 30px;
+    border-radius: 5px;
+    max-width: 320px;
+    width:auto;
+    height: auto;
+    /*background: white;*/
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-grow: 1;
+    text-align: center;
 }
 
 img{
@@ -334,7 +352,6 @@ aside#sidebar{
 }
 
 .bluebackground p{
-    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -374,12 +391,12 @@ textarea{
     padding-top: 5px;
 }
 
-/**Footer */
+/*EDIT COLOUR*//**Footer */
 footer{
     padding: 20px;
     margin: 0;
     color:#ffffff;
-    background-color:#79C4DC;
+    background-color:hwb(195 21% 39%);
     text-align: center;
     font-weight: bold;
 
