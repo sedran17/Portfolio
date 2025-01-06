@@ -141,6 +141,18 @@ img{
     padding: 0px 0px;
 }
 
+/**CIv Bridge*/
+.mat{
+    justify-content: center;
+    align-items: center;
+}
+
+.photon{
+    max-width:800px;
+    width: 100%;
+}
+
+
 /**Main */
 .main{
     background-color: #f4f4f4;
@@ -286,7 +298,7 @@ aside#sidebar{
     background: #79C4DC;
 }
 
-/**Photo Gallery */
+/**Captain Weaver */
 .photogallery{
     max-width: auto;
     max-height: auto;
@@ -299,24 +311,28 @@ aside#sidebar{
 }
 
 .photogallery img{
-    max-width:400px;
+    /* max-width:400px; */
     width: 100%;
     padding:10px;
+    margin: 10px;
 }
 
 .photo:nth-of-type(1){ 
     grid-column: 2/3;
+    max-width:300px;
 }
 
-.photo:nth-of-type(2){ 
+.photolan:nth-of-type(2){ 
     grid-column: 4/5;
+    max-width:700px;
 }
 
 .photo:nth-of-type(3){ 
     grid-column: 6/7;
+    max-width:400px;
 }
 
-.photo:nth-of-type(4){ 
+/* .photo:nth-of-type(4){ 
     grid-column: 2/3;
     grid-row: 3/4;
 }
@@ -329,7 +345,7 @@ aside#sidebar{
 .photo:nth-of-type(6){ 
     grid-column: 6/7;
     grid-row: 3/4;
-}
+} */
 
 /**Form */
 .button{
