@@ -147,15 +147,83 @@ img{
     align-items: center;
 }
 
-.photon img{
-    max-width:400px;
+.photociv img{
+    max-width:600px;
+    width: 100%;
+    padding:20px;
 }
 
 #horizontal{
     transform: rotate(90deg);
-    max-width: 600px;
-    max-height: 600px;
+    /* max-width: 600px; */
+    width: 100%;
+    max-height: 800px;
 }
+
+.photogalleryciv{
+    max-width: auto;
+    max-height: auto;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    display: grid;
+
+    background-color: #ffffff;
+    grid-template-columns: 0.6fr auto 0.05fr auto 0.6fr; 
+    /* grid-template-rows: auto 20px auto 30px; */
+}
+
+.photogalleryciv img{
+    /* max-width:400px; */
+    width: 100%;
+    padding:10px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 10px; 
+    
+}
+
+.photociv:nth-of-type(1){ 
+    grid-column: 2/3;
+    max-width:650px;
+}
+
+.photociv:nth-of-type(2){ 
+    grid-column: 4/5;
+    max-width:325px;
+}
+
+.photogalleryciv2{
+    max-width: auto;
+    max-height: auto;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    display: grid;
+    place-items: center;
+
+    background-color: #ffffff;
+    grid-template-columns: 0.6fr auto 0.05fr auto 0.6fr; 
+    /* grid-template-rows: auto 20px auto 30px; */
+}
+
+.photogalleryciv2 img{
+    /* max-width:400px; */
+    width: 100%;
+    padding:10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+.photociv2:nth-of-type(1){ 
+    grid-column: 2/3;
+    max-width:650px;
+}
+
+.photociv2:nth-of-type(2){ 
+    grid-column: 4/5;
+    max-width:325px;
+}
+
 
 
 /**Main */
@@ -165,8 +233,19 @@ img{
 }
 
 .projects{
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 85%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.reg_para{
+    margin: 0 auto;
+    width: 80%;
+    /* margin-bottom: 20px; */
+    font-size: 17px; 
+    line-height: 1.5;
+
+    
 }
 
 article.main-column{
@@ -309,6 +388,8 @@ aside#sidebar{
     background: #79C4DC;
 }
 
+
+
 /**Captain Weaver */
 .photogallery{
     max-width: auto;
@@ -357,6 +438,41 @@ aside#sidebar{
     grid-column: 6/7;
     grid-row: 3/4;
 } */
+
+/** Updraft*/
+
+/* .photoup{
+    max-width: auto;
+    max-height: auto;
+    margin: auto;
+    padding-top: 20px;
+    display: grid;
+    background-color: #f4f4f4;
+    grid-template-columns: 0.6fr auto 0.1fr auto 0.1fr auto 0.6fr; 
+    grid-template-rows: auto 20px auto 30px;
+} */
+
+.photoup img{
+    max-width:400px;
+    width: 100%;
+    padding:10px;
+}
+
+/* .photoup:nth-of-type(1){ 
+    grid-column: 2/3;
+    max-width:300px;
+}
+
+.photoup:nth-of-type(2){ 
+    grid-column: 4/5;
+    max-width:700px;
+}
+
+.photoup:nth-of-type(3){ 
+    grid-column: 6/7;
+    max-width:400px;
+}
+ */
 
 /**Form */
 .button{
