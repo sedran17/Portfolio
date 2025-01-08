@@ -391,7 +391,47 @@ aside#sidebar{
 
 
 /**Captain Weaver */
-.photogallery{
+
+.photoweav img{
+    max-width:800px;
+    width: 100%;
+    padding:10px;
+}
+
+.photogalleryw{
+    max-width: auto;
+    max-height: auto;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    display: grid;
+    place-items: center;
+
+    background-color: #ffffff;
+    grid-template-columns: 0.6fr auto 0.05fr auto 0.6fr; 
+    /* grid-template-rows: auto 20px auto 30px; */
+}
+
+.photogalleryw img{
+    /* max-width:400px; */
+    width: 100%;
+    padding:10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+.photow:nth-of-type(1){ 
+    grid-column: 2/3;
+    max-width:350px;
+}
+
+.photow:nth-of-type(2){ 
+    grid-column: 4/5;
+    max-width:435px;
+}
+
+
+/* .photogallery{
     max-width: auto;
     max-height: auto;
     margin: auto;
@@ -403,7 +443,7 @@ aside#sidebar{
 }
 
 .photogallery img{
-    /* max-width:400px; */
+    max-width:400px; 
     width: 100%;
     padding:10px;
     margin: 10px;
@@ -422,7 +462,7 @@ aside#sidebar{
 .photo:nth-of-type(3){ 
     grid-column: 6/7;
     max-width:400px;
-}
+} */
 
 /* .photo:nth-of-type(4){ 
     grid-column: 2/3;
@@ -457,6 +497,51 @@ aside#sidebar{
     width: 100%;
     padding:10px;
 }
+
+.reg_paraup{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 80%;
+    /* margin-bottom: 20px; */
+    font-size: 17px; 
+    line-height: 1.5;
+
+    
+}
+
+.photogalleryup{
+    max-width: auto;
+    max-height: auto;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    display: grid;
+    place-items: center;
+
+    background-color: #ffffff;
+    grid-template-columns: 0.6fr auto 0.05fr auto 0.6fr; 
+    /* grid-template-rows: auto 20px auto 30px; */
+}
+
+.photogalleryup img{
+    /* max-width:400px; */
+    width: 100%;
+    padding:10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+.photoup2:nth-of-type(1){ 
+    grid-column: 2/3;
+    max-width:400px;
+}
+
+.photoup2:nth-of-type(2){ 
+    grid-column: 4/5;
+    max-width:435px;
+}
+
+
 
 /* .photoup:nth-of-type(1){ 
     grid-column: 2/3;
