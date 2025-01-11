@@ -401,6 +401,15 @@ nav a:hover{
 
 /**What We Do */
 /*Main*/
+.square-image {
+    width: 200px; /* Set the square size */
+    height: 200px; /* Set the square size */
+    object-fit: cover; /* Crops the image while maintaining aspect ratio */
+    display: block; /* Optional: Removes inline gap if needed */
+  }
+
+  
+  
 
 aside#sidebar{
     float:right;
@@ -460,8 +469,50 @@ aside#sidebar{
     max-width:435px;
 }
 
+.photogallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-.photogallery{
+.photo {
+    width: 350px; /* Set uniform width for all cards */
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+
+}
+
+
+.image-container {
+    width: 100%;
+    height: 350px; /* Square size */
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image is cropped to fill the square */
+}
+
+.has-text-centered {
+    margin-top: 10px;
+    font-size: 1.2em;
+    line-height: 1.2;
+    /* font-weight: bold; */
+}
+
+.m-2 {
+    margin: 10px 0;
+}
+
+
+
+/* .photogallery{
     max-width: auto;
     max-height: auto;
     margin: auto;
@@ -513,7 +564,7 @@ aside#sidebar{
     grid-row: 3/4;
     border-radius: 15px;
 }
-
+ */
 
 /** Updraft*/
 
