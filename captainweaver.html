@@ -14,67 +14,115 @@
     <!--Header and Navigation Bar-->
     <header>
       <nav class="navbar is-link">
-          <div class="navbar-brand">
-            <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
-            <div class="navbar-burger js-burger is-active" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
+          <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        
-          <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="index.html"> Home </a>
-              <a class="navbar-item" href="mystory.html"> My Story </a>
-  
-              <div class="navbar-item dropdown is-hoverable">
-                  <div class="dropdown-trigger">
-                    <div aria-haspopup="true" aria-controls="dropdown-menu4">
-                      <span>Projects</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                  </div>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                    <div class="dropdown-content">
-                      <div class="dropdown-item">
-                          <a href="cnc.html"> CNC Router</a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="updraft.html"> Updraft </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="captainweaver.html"> Captain Weaver </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="civbridge.html"> Matboard Bridge </a>
-                      </div>
-                      
-                      <!-- <div class="dropdown-item">
-                          <a href="equitylab.html"> EquityLab </a>
-                      </div> -->
-                      
-                    </div>
-                  </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>
+            <div class="navbar-item dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <div aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Projects</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
                 </div>
-            </div>
-        
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="field is-grouped">
-                  <p class="control">
-                    <a class="button" href="contact.html">
-                      <span>Contact</span>
-                    </a>
-                  </p>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="cnc.html">CNC Router</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="updraft.html">Updraft</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="captainweaver.html">Captain Weaver</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="civbridge.html">Matboard Bridge</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button" href="contact.html">
+                    <span>Contact</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".js-burger");
+        const menu = document.querySelector("#navbarExampleTransparentExample");
+
+        burger.addEventListener("click", () => {
+            menu.classList.toggle("is-active");
+
+            if (menu.classList.contains("is-active")) {
+            
+            const navbarStart = menu.querySelector(".navbar-start");
+            if (!navbarStart.querySelector(".navbar-item.project-link")) {
+                const projects = [
+                { href: "cnc.html", text: "CNC Router" },
+                { href: "updraft.html", text: "Updraft" },
+                { href: "captainweaver.html", text: "Captain Weaver" },
+                { href: "civbridge.html", text: "Matboard Bridge" },
+                { href: "contact.html", text: "Contact" },
+                ];
+                projects.forEach((project) => {
+                const projectLink = document.createElement("a");
+                projectLink.className = "navbar-item project-link";
+                projectLink.href = project.href;
+                projectLink.textContent = project.text;
+                navbarStart.insertBefore(projectLink, navbarStart.querySelector(".dropdown"));
+                });
+            }
+
+        
+            const projectsDropdown = navbarStart.querySelector(".dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "none";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "none";
+            }
+            } else {
+            menu.querySelectorAll(".navbar-item.project-link").forEach((item) => item.remove());
+
+            const projectsDropdown = menu.querySelector(".navbar-start .dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "";
+            }
+            }
+        });
+        });
+
+      </script>
       
   </header>
 
@@ -88,7 +136,7 @@
       <div class="photoweav has-text-centered"><img src="images/weaving.png">
       
       <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-      <p class = "reg_paraup has-text-centered"> Basket weaving is the process by which baskets are created from reeds or cordage. Cordage  (shown below) is wrapped around reeds is repetitive motions to weave a basket. Basket weaving is an activity enjoyed by many elderly members of the Toronto Spinners and Weavers Guild who suffer from arthritis an inflammatory joint condition. This project was created for ESC102: Praxis II in a team of four people. We created a basket weaving aid for members of the Guild who suffer from arthritis.</p>
+      <p class = "reg_paraup has-text-centered"> Basket weaving is the process by which baskets are created from reeds or cordage. Cordage (below left) is wrapped around reeds in repetitive motions to weave a basket. Basket-weaving is an activity enjoyed by many elderly members of the Toronto Spinners and Weavers Guild who suffer from arthritis, an inflammatory joint condition. This project was created for ESC102: Praxis II in a team of four people. We created a basket-weaving aid for members of the Guild who suffer from arthritis.</p>
     <!-- </div> -->
       
     <div class="photogalleryw">
@@ -97,7 +145,7 @@
   
       </div>
   <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-  <p class = "reg_paraup has-text-centered pt-3 pb-6"> “Captain Weaver” is an aid in the beginning part of basket weaving. In the handheld mode, the reed or cordage is woven around the needle on top of our prototype to create the base. As the user is weaving they can rotate the needle and therefore the base of the basket by using their thumb to push the “pirate ship wheel”. This allows the user to cut down on the harmful pinching motion needed for basket weaving. My team and I designed Captain Weaver, and I CADed it using Autodesk Fusion 360.</p>
+  <p class = "reg_paraup has-text-centered pt-3 pb-6"> “Captain Weaver” is an aid for the beginning part of basket weaving. In the handheld mode, the reed or cordage is woven around the needle on top of our prototype to create the base. As the user is weaving they can rotate the needle and the base of the basket by using their thumb to push the “pirate ship wheel”. This allows the user to cut down on the harmful pinching motion needed for basket weaving. My team and I designed Captain Weaver, and I CADed it using Autodesk Fusion 360.</p>
       
         </section>
         </div>  

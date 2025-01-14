@@ -14,67 +14,115 @@
     <!--Header and Navigation Bar-->
     <header>
       <nav class="navbar is-link">
-          <div class="navbar-brand">
-            <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
-            <div class="navbar-burger js-burger is-active" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
+          <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        
-          <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="index.html"> Home </a>
-              <a class="navbar-item" href="mystory.html"> My Story </a>
-  
-              <div class="navbar-item dropdown is-hoverable">
-                  <div class="dropdown-trigger">
-                    <div aria-haspopup="true" aria-controls="dropdown-menu4">
-                      <span>Projects</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                  </div>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                    <div class="dropdown-content">
-                      <div class="dropdown-item">
-                          <a href="cnc.html"> CNC Router</a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="updraft.html"> Updraft </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="captainweaver.html"> Captain Weaver </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="civbridge.html"> Matboard Bridge </a>
-                      </div>
-                      
-                      <!-- <div class="dropdown-item">
-                          <a href="equitylab.html"> EquityLab </a>
-                      </div> -->
-                      
-                    </div>
-                  </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>
+            <div class="navbar-item dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <div aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Projects</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
                 </div>
-            </div>
-        
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="field is-grouped">
-                  <p class="control">
-                    <a class="button" href="contact.html">
-                      <span>Contact</span>
-                    </a>
-                  </p>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="cnc.html">CNC Router</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="updraft.html">Updraft</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="captainweaver.html">Captain Weaver</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="civbridge.html">Matboard Bridge</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button" href="contact.html">
+                    <span>Contact</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".js-burger");
+        const menu = document.querySelector("#navbarExampleTransparentExample");
+
+        burger.addEventListener("click", () => {
+            menu.classList.toggle("is-active");
+
+            if (menu.classList.contains("is-active")) {
+            
+            const navbarStart = menu.querySelector(".navbar-start");
+            if (!navbarStart.querySelector(".navbar-item.project-link")) {
+                const projects = [
+                { href: "cnc.html", text: "CNC Router" },
+                { href: "updraft.html", text: "Updraft" },
+                { href: "captainweaver.html", text: "Captain Weaver" },
+                { href: "civbridge.html", text: "Matboard Bridge" },
+                { href: "contact.html", text: "Contact" },
+                ];
+                projects.forEach((project) => {
+                const projectLink = document.createElement("a");
+                projectLink.className = "navbar-item project-link";
+                projectLink.href = project.href;
+                projectLink.textContent = project.text;
+                navbarStart.insertBefore(projectLink, navbarStart.querySelector(".dropdown"));
+                });
+            }
+
+        
+            const projectsDropdown = navbarStart.querySelector(".dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "none";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "none";
+            }
+            } else {
+            menu.querySelectorAll(".navbar-item.project-link").forEach((item) => item.remove());
+
+            const projectsDropdown = menu.querySelector(".navbar-start .dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "";
+            }
+            }
+        });
+        });
+
+      </script>
       
   </header>
 
@@ -90,9 +138,9 @@
       <div class="photoweav has-text-centered"><img src="images/cnc.png">
       
       <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-      <p class = "reg_paraup has-text-centered"> Two others and myself designed this CNC Router and I CADed it in SOLIDWORKS. The Router was designed as a final course project for MIE243: Engineering Design. The router has 3 axes, uses a direct drive spindle and is supported across the y-axis. The x and y axes use ball screws with stepper motors and linear rails for support (flat profile). The z-axis uses a lead screw with a stepper motor. It uses an air coolant and uses a standard T slot table. The purpose of the project was to design a router that could be used by the hobbyist community</p>
+      <p class = "reg_paraup has-text-centered"> Two others and I designed this CNC Router and I CADed it in SOLIDWORKS. The Router was created as a final course project for MIE243: Engineering Design. The router has 3 axes, uses a direct drive spindle and is supported across the y-axis. The x and y axes use ball screws with stepper motors and linear rails for support. The z-axis uses a lead screw with a stepper motor. It uses an air coolant and uses a standard T-slot table. The purpose of the project was to design a router that could be used by the hobbyist community</p>
 
-      <p class = "reg_paraup has-text-centered"> First my group identified what hobbysists are looking for in a cnc: a cnc which is affordable ($2000-$5000), easy to assemble, and capable of handling wood, plastics, and aluminum. It should also feature components that are easy to source or fabricate and allow for upgrades. Next, created Engineering Specifications of what we needed to have in our design. This was our list of engineering specifications:
+      <p class = "reg_paraup has-text-centered"> First my group identified what hobbyists are looking for in a CNC: affordability ($2000-$5000), ease of assembly, and capability of handling wood, plastics, and aluminum. It should also feature components that are easy to source or fabricate and allow for upgrades. Next, we created Engineering Specifications of what we needed to have in our design. This was our list of engineering specifications:
 
       </p>
 
@@ -102,7 +150,7 @@
     <!-- </div> -->
   
   <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-  <p class = "reg_paraup has-text-centered pt-3 "> We created a design toolkit of possible mechanisms we could use in a router (design toolkit shown below). After the formation of the toolkit, we created several candidate designs. We analyzed our candidate designs and selected the best one as our final design. We selected a direct-driven spindle for better speed and torque. Stepper motors for affordability and ease of use. Flat profile rails for stability and precision. We selected ball screws for X and Y axes and lead screws for Z-axis for accuracy and cost-effectiveness.</p>
+  <p class = "reg_paraup has-text-centered pt-3 "> We created a design toolkit of possible mechanisms we could use in a router (design toolkit shown below). After the formation of the toolkit, we created several candidate designs. We analyzed our candidate designs and selected the best one. We selected a direct-driven spindle for better speed and torque. Stepper motors for affordability and ease of use. Flat profile rails for stability and precision. We chose ball screws for X and Y axes and lead screws for Z-axis for accuracy and cost-effectiveness.</p>
 
   <div class="photoweav has-text-centered"><img src="images/designtool.png">
 

@@ -11,10 +11,121 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 </head>
 <body>
+    <nav class="navbar is-link">
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
+          <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>
+            <div class="navbar-item dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <div aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Projects</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="cnc.html">CNC Router</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="updraft.html">Updraft</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="captainweaver.html">Captain Weaver</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="civbridge.html">Matboard Bridge</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button" href="contact.html">
+                    <span>Contact</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".js-burger");
+        const menu = document.querySelector("#navbarExampleTransparentExample");
+
+        burger.addEventListener("click", () => {
+            menu.classList.toggle("is-active");
+
+            if (menu.classList.contains("is-active")) {
+            
+            const navbarStart = menu.querySelector(".navbar-start");
+            if (!navbarStart.querySelector(".navbar-item.project-link")) {
+                const projects = [
+                { href: "cnc.html", text: "CNC Router" },
+                { href: "updraft.html", text: "Updraft" },
+                { href: "captainweaver.html", text: "Captain Weaver" },
+                { href: "civbridge.html", text: "Matboard Bridge" },
+                { href: "contact.html", text: "Contact" },
+                ];
+                projects.forEach((project) => {
+                const projectLink = document.createElement("a");
+                projectLink.className = "navbar-item project-link";
+                projectLink.href = project.href;
+                projectLink.textContent = project.text;
+                navbarStart.insertBefore(projectLink, navbarStart.querySelector(".dropdown"));
+                });
+            }
+
+        
+            const projectsDropdown = navbarStart.querySelector(".dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "none";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "none";
+            }
+            } else {
+            menu.querySelectorAll(".navbar-item.project-link").forEach((item) => item.remove());
+
+            const projectsDropdown = menu.querySelector(".navbar-start .dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "";
+            }
+            }
+        });
+        });
+
+      </script>
 
     <!--Header and Navigation Bar-->
     <header>
-    <nav class="navbar is-link">
+        
+    <!-- <nav class="navbar is-link">
         <div class="navbar-brand">
           <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
           <div class="navbar-burger js-burger is-active" data-target="navbarExampleTransparentExample">
@@ -28,7 +139,7 @@
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item" href="index.html"> Home </a>
-            <a class="navbar-item" href="mystory.html"> My Story </a>
+            <a class="navbar-item" href="mystory.html"> My Story </a> 
 
             <div class="navbar-item dropdown is-hoverable">
                 <div class="dropdown-trigger">
@@ -53,9 +164,9 @@
                     <div class="dropdown-item">
                         <a href="civbridge.html"> Matboard Bridge </a>
                     </div>
-                    <!-- <div class="dropdown-item">
+                    <div class="dropdown-item">
                         <a href="equitylab.html"> EquityLab </a>
-                    </div> -->
+                    </div> 
                   </div>
                 </div>
               </div>
@@ -73,7 +184,7 @@
             </div>
           </div>
         </div>
-      </nav>
+      </nav> -->
     
 </header>
 
@@ -90,7 +201,7 @@
                   Schulich Leader
                 </div>
                 <div class="is-size-5 m-4 ml-6">
-                  Aspiring robotics engineer and 2023 Schulich Leader Scholarship recipient with over 30 awards in competitive robotics at regional, national, and international levels. Currently a second-year Engineering Science student at the University of Toronto, with expertise in CAD software (Solidworks, Fusion 360, Onshape) and programming languages (JavaScript, Java, Python, C, MATLAB). Proven ability in team leadership and advanced robotics design, exemplified through leading roles in several Robotics Associations. 
+                  My name is Samantha Sedran. I am a University of Toronto Engineering Science student, aspiring Robotics major and 2023 Schulich Leader Scholarship recipient with over 30 awards in competitive robotics at regional, national, and international levels. I have expertise in many CAD softwares (Solidworks, Fusion 360, Onshape) and programming languages (JavaScript, Java, Python, C, MATLAB). I have eight years in competitive robotics experience in VEX, FIRST, and Combat Robotics. This is a summary of my projects from the last two years. 
                 </div>
               </div>
             </div>
@@ -127,7 +238,7 @@
                 </div>
                 <div class="has-text-centered is-size-5">CNC Router</div>
             </a>
-            <p class="has-text-centered m-2">Designed and CADed a CNC Router designed for hobbyist use.</p>
+            <p class="has-text-centered m-2">Designed and CADed a CNC Router for hobbyist use.</p>
         </div>
     
         <div class="photo">
@@ -137,7 +248,7 @@
                 </div>
                 <div class="has-text-centered is-size-5">Updraft</div>
             </a>
-            <p class="has-text-centered m-2">The robot I am working on as a member of the UTRA Combat team.</p>
+            <p class="has-text-centered m-2">My subteam's robot on UTRA Combat.</p>
         </div>
     
         <div class="photo">
@@ -157,7 +268,7 @@
                 </div>
                 <div class="has-text-centered is-size-5">Matboard Bridge</div>
             </a>
-            <p class="has-text-centered m-2">Design a bridge created out of matboard that could withstand 447N.</p>
+            <p class="has-text-centered m-2">A bridge created out of matboard that could withstand 447N.</p>
         </div>
     
         <!-- <div class="photo">

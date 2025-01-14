@@ -14,68 +14,115 @@
     <!--Header and Navigation Bar-->
     <header>
       <nav class="navbar is-link">
-          <div class="navbar-brand">
-            <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
-            <div class="navbar-burger js-burger is-active" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-2 ml-2 mr-2" href="index.html">Samantha Sedran</a>
+          <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        
-          <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="index.html"> Home </a>
-              <a class="navbar-item" href="mystory.html"> My Story </a>
-  
-              <div class="navbar-item dropdown is-hoverable">
-                  <div class="dropdown-trigger">
-                    <div aria-haspopup="true" aria-controls="dropdown-menu4">
-                      <span>Projects</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                  </div>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                    <div class="dropdown-content">
-                      <div class="dropdown-item">
-                          <a href="cnc.html"> CNC Router</a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="updraft.html"> Updraft </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="captainweaver.html"> Captain Weaver </a>
-                      </div>
-                      <div class="dropdown-item">
-                          <a href="civbridge.html"> Matboard Bridge </a>
-                      </div>
-                      
-                      <!-- <div class="dropdown-item">
-                          <a href="equitylab.html"> EquityLab </a>
-                      </div> -->
-                      
-                    </div>
-                  </div>
+        </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>
+            <div class="navbar-item dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <div aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Projects</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
                 </div>
-            </div>
-        
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="field is-grouped">
-                  <p class="control">
-                    <a class="button" href="contact.html">
-                      <span>Contact</span>
-                    </a>
-                  </p>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <a href="cnc.html">CNC Router</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="updraft.html">Updraft</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="captainweaver.html">Captain Weaver</a>
+                  </div>
+                  <div class="dropdown-item">
+                    <a href="civbridge.html">Matboard Bridge</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
-      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button" href="contact.html">
+                    <span>Contact</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".js-burger");
+        const menu = document.querySelector("#navbarExampleTransparentExample");
+
+        burger.addEventListener("click", () => {
+            menu.classList.toggle("is-active");
+
+            if (menu.classList.contains("is-active")) {
+            
+            const navbarStart = menu.querySelector(".navbar-start");
+            if (!navbarStart.querySelector(".navbar-item.project-link")) {
+                const projects = [
+                { href: "cnc.html", text: "CNC Router" },
+                { href: "updraft.html", text: "Updraft" },
+                { href: "captainweaver.html", text: "Captain Weaver" },
+                { href: "civbridge.html", text: "Matboard Bridge" },
+                { href: "contact.html", text: "Contact" },
+                ];
+                projects.forEach((project) => {
+                const projectLink = document.createElement("a");
+                projectLink.className = "navbar-item project-link";
+                projectLink.href = project.href;
+                projectLink.textContent = project.text;
+                navbarStart.insertBefore(projectLink, navbarStart.querySelector(".dropdown"));
+                });
+            }
+
+        
+            const projectsDropdown = navbarStart.querySelector(".dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "none";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "none";
+            }
+            } else {
+            menu.querySelectorAll(".navbar-item.project-link").forEach((item) => item.remove());
+
+            const projectsDropdown = menu.querySelector(".navbar-start .dropdown");
+            if (projectsDropdown) {
+                projectsDropdown.style.display = "";
+            }
+
+            const navbarEnd = menu.querySelector(".navbar-end");
+            const contactButton = navbarEnd.querySelector(".navbar-item");
+            if (contactButton) {
+                contactButton.style.display = "";
+            }
+            }
+        });
+        });
+
+      </script>
   </header>
 <!--Title-->
 <!-- <section>
@@ -94,7 +141,7 @@
   
     </div>
   <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-  <p class = "reg_para has-text-centered"> Using the concepts taught in CIV102, three others and myself designed and created a bridge out of Matboard (cardboard-like material) that supported a small train initially weighing 400N. The train ran across the bridge multiple times, each time increasing in weight. It was calculated the bridge could withstand 540N of force before failure. The bridge failed at 500N passing the first two test cases of 400N and 447N. The image shows the train being pulled across our bridge. The bridge was made of pieces of matboard attached together with cement glue. The image to the right was taken while buildng the bridge</p>
+  <p class = "reg_para has-text-centered"> Using the concepts taught in CIV102, three others and I designed and created a bridge out of Matboard (cardboard-like material) that supported a small train initially weighing 400N. The train ran across the bridge multiple times, each time increasing in weight. It was calculated the bridge could withstand 540N of force before failure. The bridge failed at 500N passing the first two test cases of 400N and 447N. The image shows the train being pulled across our bridge. The bridge was made of pieces of matboard attached together with cement glue. The image above to the right was taken while building the bridge. </p>
 <!-- </div> -->
   
     <div class="photogalleryciv2">
@@ -103,7 +150,7 @@
 
     </div>
   <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
-  <p class = "reg_para has-text-centered pb-6"> We went through several iterations of the design of the cross section (left image) and ran code simulations in Python to test each one. Our final cross section (right) was a double webbed I beam cross section with a double layered top flange and a single bottom flange. The bridge had 12 diaphragms evenly spaced between it. This project really let me appreciate the iterative process of design as we would create a cross section, run the simulation for it, and then change it to improve it. We did this multiple times until we landed on our current cross section. </p>
+  <p class = "reg_para has-text-centered pb-6"> We went through several iterations of the cross-section (left above) and ran code simulations in Python to test each one. Our final cross-section (right above) was a double webbed I-beam cross-section with a double-layered top flange and a single bottom flange. The bridge had 12 diaphragms evenly spaced between it. This project let me appreciate the iterative process of design as we would create a cross-section, run the simulation for it, and then change it to improve it. We did this multiple times until we landed on our current cross-section. </p>
         </div>
 
       <!-- <div class="columns is-mobile is-centered">
