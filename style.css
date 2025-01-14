@@ -164,6 +164,13 @@ img{
     padding: 0px 0px;
 }
 
+/**EquityLab*/
+.photoeq img{
+    max-width:400px;
+    width: 100%;
+    padding:20px;
+}
+
 /**CIv Bridge*/
 .mat{
     justify-content: center;
