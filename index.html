@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Home Page">
-    <meta name="keywords" content="robotics, girls, women in STEM, STEM">
+    <meta name="keywords" content="robotics, engineering, co-op, mechanical, robots">
     <meta name="author" content="Samantha Sedran">
     <title>Samantha Sedran | Home</title>
     <link rel="stylesheet" href="style.css">
@@ -22,11 +22,10 @@
     </div>
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="index.html">Home</a>
         <div class="navbar-item dropdown is-hoverable">
           <div class="dropdown-trigger">
             <div aria-haspopup="true" aria-controls="dropdown-menu4">
-              <span>Projects</span>
+              <span>Personal Projects</span>
               <span class="icon is-small">
                 <i class="fas fa-angle-down" aria-hidden="true"></i>
               </span>
@@ -38,8 +37,22 @@
                 <a href="medusa.html">Medusa</a>
               </div>
               <div class="dropdown-item">
-                <a href="kraken.html">Project Kraken</a>
+                <a href="updraft.html">Updraft</a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Course Projects</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
               <div class="dropdown-item">
                 <a href="roofba.html">Roofba - Praxis III</a>
               </div>
@@ -47,16 +60,50 @@
                 <a href="cnc.html">CNC Router</a>
               </div>
               <div class="dropdown-item">
-                <a href="updraft.html">Updraft</a>
-              </div>
-              <div class="dropdown-item">
                 <a href="captainweaver.html">Captain Weaver - Praxis II</a>
               </div>
               <div class="dropdown-item">
                 <a href="civbridge.html">Matboard Bridge</a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Research</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
               <div class="dropdown-item">
-                <a href="equitylab.html">Equity Lab</a>
+                <a href="swarmgpt.html">SwarmGPT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Future Projects</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <a href="kraken.html">Project Kraken</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="captainweaver.html">TurtleBot ROS</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="civbridge.html">MIE366</a>
               </div>
             </div>
           </div>
@@ -207,20 +254,23 @@
             <!-- Left Column: Text -->
             <div class="column is-half">
               <div class="has-text-left">
-                <div class="is-size-2 has-text-weight-bold m-4 ml-6">About Me</div>
-                <div class="is-size-6 m-2 ml-6">
-                  Second Year Engineering Science Student at the University of Toronto 
-                  Schulich Leader
+                <div class="is-size-3 has-text-weight-bold m-4 ml-6">About Me</div>
+                <div class="is-size-6 m-2 ml-6 has-text-weight-bold">
+                  Third Year Engineering Science Robotics Major at the University of Toronto |  
+                  2023 Schulich Leader 
+                </div>
+                <div class="is-size-5 m-4 ml-6 ">
+                  My name is Samantha Sedran, a University of Toronto Engineering Science Robotics Major and a 2023 Schulich Leader Scholar. With over eight years of competitive robotics experience at regional, national, and international levels. I have skills and experience on the mechanical, software, and electrical side of robotics.
                 </div>
                 <div class="is-size-5 m-4 ml-6">
-                  My name is Samantha Sedran. I am a University of Toronto Engineering Science student majoring in Robotics and 2023 Schulich Leader Scholarship recipient with over 30 awards in competitive robotics at regional, national, and international levels. I have expertise in many CAD softwares (Solidworks, Fusion 360, Onshape) and programming languages (JavaScript, Java, Python, C, MATLAB). I have eight years in competitive robotics experience in VEX, FIRST, and Combat Robotics. This is a summary of my projects from the last two years. 
+                  I am a Certified Solidworks Associate with extensive CAD experience (Solidworks, Fusion 360, Onshape), applied through FRC robotics, university combat robotics, coursework, and personal projects. I am proficient in JavaScript, Java, Python, C, MATLAB, and R. I am experienced with several robotics and research tools including ROS, Mujoco, Mamba, Conda, and Pixi. I also have hands-on experience in electronics, from soldering to circuit simulation (LTSpice, SuperSpice). This portfolio highlights selected projects and serves as an extension of my resume.
                 </div>
               </div>
             </div>
-          
+
             <!-- Right Column: Image -->
             <div class="column is-half has-text-centered">
-              <figure class="image is-square m-4">
+              <figure class="image is-square m-4  mr-3 pr-4">
                 <img
                 src="images/me2.jpg"
                 alt="A descriptive alt text for the image"
@@ -232,17 +282,67 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 " />
     </figure>
-                
+
               </figure>
             </div>
           </div>
-          
-    
-        
+
+    <div class="buttons is-flex is-justify-content-center p-0 m-0 ml-6 mr-4">
+                    <button class="button is-info">SOLIDWORKS</button>
+                    <button class="button is-info">Fusion 360</button>
+                    <button class="button is-info">Onshape</button>
+                    <button class="button is-info">Mechanical Engineering Design</button>
+                    <button class="button is-success">JavaScript</button>
+                    <button class="button is-success">Java</button>
+                    <button class="button is-success">R</button>
+                    <button class="button is-success">C</button>
+                    <button class="button is-success">MATLAB</button>
+                    <button class="button is-primary">LTSpice</button>
+                    <button class="button is-primary">SuperSpice</button>
+                    <button class="button is-primary">Soldering</button>
+                    <button class="button is-warning">ROS</button>
+                    <button class="button is-warning">Mujoco</button>
+                    <button class="button is-warning">Mamba</button>
+                    <button class="button is-warning">Conda</button>
+                    <button class="button is-warning">Pixi</button>
+                    <button class="button is-warning">GitHub</button>
+                </div>
 
     <!--Project-->
-    <div class="has-text-centered is-size-2 m-5 mt-6" >Projects</div>
+    <div class="has-text-centered is-size-2 m-5 mt-6">Personal Projects</div>
     <section class="photogallery">
+      <div class="photo">
+            <a href="medusa.html">
+                <div class="image-container">
+                    <img src="images/cnc.png" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">Medusa</div>
+            </a>
+            <p class="has-text-centered m-2">1lb Personal Combat Robot</p>
+        </div>
+        <div class="photo">
+            <a href="updraft.html">
+                <div class="image-container">
+                    <img src="images/UpdraftImg.jpg" alt="Image 2">
+                </div>
+                <div class="has-text-centered is-size-5">Updraft</div>
+            </a>
+            <p class="has-text-centered m-2">3lb Beater Bar robot on UTRA Combat</p>
+        </div>
+    </section>
+
+<div class="has-text-centered is-size-2 m-5 mt-6">Course Projects</div>
+    <section class="photogallery">
+      
+        <div class="photo">
+            <a href="roofba.html">
+                <div class="image-container">
+                    <img src="images/roofba.jpg" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">Roofba</div>
+            </a>
+            <p class="has-text-centered m-2">Robot designed to traverse roofs and clear debris</p>
+        </div>
         <div class="photo">
             <a href="cnc.html">
                 <div class="image-container">
@@ -250,17 +350,7 @@
                 </div>
                 <div class="has-text-centered is-size-5">CNC Router</div>
             </a>
-            <p class="has-text-centered m-2">Designed and CADed a CNC Router for hobbyist use.</p>
-        </div>
-    
-        <div class="photo">
-            <a href="updraft.html">
-                <div class="image-container">
-                    <img src="images/updraft2.png" alt="Image 2">
-                </div>
-                <div class="has-text-centered is-size-5">Updraft</div>
-            </a>
-            <p class="has-text-centered m-2">My subteam's robot on UTRA Combat.</p>
+            <p class="has-text-centered m-2">CNC Router for hobbyist use</p>
         </div>
     
         <div class="photo">
@@ -270,7 +360,7 @@
                 </div>
                 <div class="has-text-centered is-size-5">Captain Weaver</div>
             </a>
-            <p class="has-text-centered m-2">A basket-weaving aid designed to assist those with hand arthritis.</p>
+            <p class="has-text-centered m-2">A basket-weaving aid designed to assist those with arthritis</p>
         </div>
     
         <div class="photo">
@@ -280,129 +370,63 @@
                 </div>
                 <div class="has-text-centered is-size-5">Matboard Bridge</div>
             </a>
-            <p class="has-text-centered m-2">A bridge created out of matboard that could withstand 447N.</p>
+            <p class="has-text-centered m-2">Bridge created out of matboard that could withstand 447N</p>
         </div>
     
-        <div class="photo">
-            <a href="equitylab.html">
-                <div class="image-container">
-                    <img src="images/logoagain.png" alt="Image 5">
-                </div>
-                <div class="has-text-centered is-size-5">EquityLab</div>
-            </a>
-            <p class="has-text-centered m-2">Designed a website to educate elementary aged kids about STEM Trailblazers.</p>
-        </div>
     </section>
-    
-    <!-- <section class="photogallery">
-        <div class="photo"><a href="cnc.html"><img src="images/cnc.png" alt="Image 1" class="square-image">
-            <div class="has-text-centered is-size-5">CNC Router</div>
-        </a><p class="has-text-centered m-2">Designed and CADed a CNC Router designed for hobbyist use.</p></div>
 
-        <div class="photo"><a href="updraft.html"><img src="images/updraft2.png">
-            <div class="has-text-centered is-size-5">Updraft</div>
-        </a>
-        <p class="has-text-centered m-2">The robot I am working on as a member of the UTRA Combat team.</p></div>
-        <div class="photo"><a href="captainweaver.html"><img src="images/weaver.png">
-            <div class="has-text-centered is-size-5">Captain Weaver</div>
-        </a>
-        <p class="has-text-centered m-2">A basket-weaving aid designed to assist those with hand arthritis.</p></div>
-        <div class="photo"><a href="civbridge.html"><img src="images/building.jpg">
-            <div class="has-text-centered is-size-5">Matboard Bridge</div>
-        </a>
-        <p class="has-text-centered m-2">Design a bridge created out of matboard that could withstand 447N.</p></div>
-        <div class="photo"><a href="equitylab.html"><img src="images/updraft2.png">
-            <div class="has-text-centered is-size-5">EquityLab</div>
-        </a>
-        <p class="has-text-centered m-2">Designed a website to educate elementary aged kids about STEM Trailblazers.</p></div>
-        
-    </section> -->
-<!-- <section class="containerboxes">
-    <div class="columns">
-        <div class="column">
-            <div class="box card ml-6">
-                <a href="cnc.html"><img src="images/cnc.png">
-                    <div class="has-text-centered is-size-5">CNC Router</div>
-                </a>
-                <p>Designed and CADed a CNC Router designed for hobbyist use.</p>
-            </div>    </div>
-        <div class="column">
-            <div class="box card mr-3 ml-3">
-            <a href="updraft.html"><img src="images/updraft2.png">
-                <div class="has-text-centered is-size-5">Updraft</div>
+    <div class="has-text-centered is-size-2 m-5 mt-6">Research</div>
+    <section class="photogallery">
+      
+        <div class="photo">
+            <a href="roofba.html">
+                <div class="image-container">
+                    <img src="images/roofba.jpg" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">SwarmGPT</div>
             </a>
-            <p>The robot I am working on as a member of the UTRA Combat team.</p>
+            <p class="has-text-centered m-2">Novel way to choreograph drones to light shows using LLMs</p>
         </div>
-        </div>
-        <div class="column">
-            <div class="box card mr-6">
-            <a href="captainweaver.html"><img src="images/weaver.png">
-                <div class="has-text-centered is-size-5">Captain Weaver</div>
-            </a>
-            <p>A basket-weaving aid designed to assist those with hand arthritis.</p>
-        </div>
-        </div>
-        
-    </div>
-    <div class="columns">
-        <div class="column">
-            <div class="box card ml-6">
-                <a href="civbridge.html"><img src="images/building.jpg">
-                    <div class="has-text-centered is-size-5">Matboard Bridge</div>
-                </a>
-                <p>Design a bridge created out of matboard that could withstand 447N.</p>
-            </div>    </div>
-        <div class="column">
-            <div class="box card mr-3 ml-3">
-            <a href="equitylab.html"><img src="images/updraft2.png">
-                <div class="has-text-centered is-size-5">EquityLab</div>
-            </a>
-            <p>Designed a website to educate elementary aged kids about STEM Trailblazers.</p>
-        </div>
-        </div>
-        
-        </div>
-        
-    </div>
-    </section> -->
+      
+    </section>
+  </div>
 
+  <div class="has-text-centered is-size-2 m-5 mt-6">Future Projects</div>
+    <section class="photogallery">
+      
+        <div class="photo">
+            <a href="roofba.html">
+                <div class="image-container">
+                    <img src="images/roofba.jpg" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">Project Kraken</div>
+            </a>
+            <p class="has-text-centered m-2">Robot designed to traverse roofs and clear debris</p>
+        </div>
+        <div class="photo">
+            <a href="roofba.html">
+                <div class="image-container">
+                    <img src="images/roofba.jpg" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">Intro to Robo</div>
+            </a>
+            <p class="has-text-centered m-2">Robot designed to traverse roofs and clear debris</p>
+        </div>
+        <div class="photo">
+            <a href="roofba.html">
+                <div class="image-container">
+                    <img src="images/roofba.jpg" alt="Image 1">
+                </div>
+                <div class="has-text-centered is-size-5">MIE366</div>
+            </a>
+            <p class="has-text-centered m-2">Robot designed to traverse roofs and clear debris</p>
+        </div>
+      
+    </section>
+  </div>
 </section>
 
 
-<!-- <section class="boxes is-link">
-    <div class="containerboxes">
-        <div class="box card">
-            <a href="whatwedo.html"><img src="images/whatwedo.JPG">
-                <div class="has-text-centered is-size-5">CNC Router</div>
-            </a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolorum explicabo magnam quaerat, earum autem.</p>
-        </div>
-        <div class="box card">
-            <a href="wish.html"><img src="images/wish.JPG">
-            <h3>Updraft - UTRA Combat</h3></a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolorum explicabo magnam quaerat, earum autem.</p>
-        </div>
-        <div class="box card">
-            <a href="photogallery.html"><img src="images/photogallery.JPG">
-            <h3>Captain Weaver - Praxis II Project</h3></a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolorum explicabo magnam quaerat, earum autem.</p>
-        </div>
-    </div>
-    <div class="containerboxes">
-        <div class="box card">
-            <a href="whatwedo.html"><img src="images/whatwedo.JPG">
-            <h3>Matboard Bridge</h3></a>
-              </div>
-        <div class="box card">
-            <a href="wish.html"><img src="images/wish.JPG">
-            <h3>Praxis I Project</h3></a>
-                    </div>
-        <div class="box card">
-            <a href="photogallery.html"><img src="images/photogallery.JPG">
-            <h3>Equity Lab</h3></a>
-                    </div>
-    </div>
-</section> -->
 </body>
 
 <!--Footer-->

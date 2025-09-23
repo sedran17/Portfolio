@@ -10,8 +10,13 @@ body{
     font-size: 16px;
     line-height: 0.3;
     color: #333;
+    background-color: #e0e0e0; /* grey background */
 
 }
+
+
+
+
 
 .general{
     width:90%;
@@ -266,7 +271,6 @@ img{
 
 /**Main */
 .main{
-  
     background-color: #f4f4f4;
 }
 
@@ -274,16 +278,17 @@ img{
     width: 85%;
     margin: 0 auto;
     background-color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .reg_para{
     margin: 0 auto;
     width: 80%;
     /* margin-bottom: 20px; */
-    font-size: 17px; 
+    font-size: 17px;
     line-height: 1.5;
 
-    
 }
 
 article.main-column{
