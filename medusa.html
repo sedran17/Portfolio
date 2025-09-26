@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Home Page">
+    <meta name="keywords" content="robotics, combat, CAD, SOLIDWORKS, Fusion 360">
+    <meta name="author" content="Samantha Sedran">
+    <title>Samantha Sedran | Medusa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <!--Header and Navigation Bar-->
+      <nav class="navbar is-link">
+    <div class="navbar-brand">
+      <a class="navbar-item is-size-3 ml-2 mr-2" href="index.html">Samantha Sedran</a>
+      <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Personal Projects</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <a href="medusa.html">Medusa</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="updraft.html">Updraft</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Course Projects</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <!--<div class="dropdown-item">
+                <a href="roofba.html">Roofba - Praxis III</a>
+              </div>-->
+              <div class="dropdown-item">
+                <a href="cnc.html">CNC Router</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="captainweaver.html">Captain Weaver - Praxis II</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="civbridge.html">Matboard Bridge</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Research</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <a href="swarmgpt.html">SwarmGPT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Future Projects</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <a href="kraken.html">Project Kraken</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="captainweaver.html">TurtleBot ROS</a>
+              </div>
+              <div class="dropdown-item">
+                <a href="civbridge.html">MIE366</a>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button" href="contact.html">
+                <span>Contact</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".js-burger");
+    const menu = document.querySelector("#navbarExampleTransparentExample");
+
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("is-active");
+
+        if (menu.classList.contains("is-active")) {
+        
+        const navbarStart = menu.querySelector(".navbar-start");
+        if (!navbarStart.querySelector(".navbar-item.project-link")) {
+            const projects = [
+            { href: "medusa.html", text: "Medusa" },
+            { href: "cnc.html", text: "CNC Router" },
+            { href: "updraft.html", text: "Updraft" },
+            { href: "captainweaver.html", text: "Captain Weaver" },
+            { href: "civbridge.html", text: "Matboard Bridge" },
+            { href: "contact.html", text: "Contact" },
+            ];
+            projects.forEach((project) => {
+            const projectLink = document.createElement("a");
+            projectLink.className = "navbar-item project-link";
+            projectLink.href = project.href;
+            projectLink.textContent = project.text;
+            navbarStart.insertBefore(projectLink, navbarStart.querySelector(".dropdown"));
+            });
+        }
+
+    
+        const projectsDropdown = navbarStart.querySelector(".dropdown");
+        if (projectsDropdown) {
+            projectsDropdown.style.display = "none";
+        }
+
+        const navbarEnd = menu.querySelector(".navbar-end");
+        const contactButton = navbarEnd.querySelector(".navbar-item");
+        if (contactButton) {
+            contactButton.style.display = "none";
+        }
+        } else {
+        menu.querySelectorAll(".navbar-item.project-link").forEach((item) => item.remove());
+
+        const projectsDropdown = menu.querySelector(".navbar-start .dropdown");
+        if (projectsDropdown) {
+            projectsDropdown.style.display = "";
+        }
+
+        const navbarEnd = menu.querySelector(".navbar-end");
+        const contactButton = navbarEnd.querySelector(".navbar-item");
+        if (contactButton) {
+            contactButton.style.display = "";
+        }
+        }
+    });
+    });
+
+  </script>
+  <header>
+  </header>
+<!--Title-->
+<!-- <section>
+    <div class="has-text-centered is-size-2 m-4">Updraft</div>
+</section> -->
+
+<div class = "main">
+  <!--Project-->
+  <section class="projects">
+
+    <div class="has-text-centered is-size-2 mb-2 pt-4">Medusa</div>
+    <div class="has-text-centered is-size-5 p-2">June 2025 - Present</div>
+    <div class="buttons is-flex is-justify-content-center p-1 m-1">
+  <button class="button is-info">SOLIDWORKS</button>
+  <button class="button is-info">Mechanical Engineering Design</button>
+</div>
+
+   <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
+    <p class = "reg_paraup has-text-centered"> Last summer I started designing my own personal 1lb combat robot named Medusa. Medusa is a ring spinner bot with a hardened steel ring spinning around its body with the goal of hitting robots to the side into the wall of the arena. Medusa has 3 main parts: the chassis which hold the ring, drivetrain, friction drive subsystem to spin the ring.
+    </p>
+
+
+    <div class="photogalleryup mb-2">
+      <div class="photoup2"><img src="images/MedusaPrototypeV1.png"></div>
+      <div class="photoup2"><img src="images/medusaphys.jpg"></div>
+
+    </div>
+
+
+    
+
+    <!-- <div class="photociv has-text-centered"><img src="images/bridgetest.png"> <img src="images/building.jpg"> -->
+    <p class = "reg_paraup has-text-centered p-3 "> The chassis of Medusa is still in the prototyping phase. Currently the initial prototype uses a PLA chassis that uses bearings on the side and below the ring to hold it in place. This allows the ring to spin freely around the entire robot. This intial prototype works pretty well, but some changes need to be made. I need to replace large side ball bearings with needle nose bearings as they are more efficient in handling radial loads and the side bearings experience minimal axial load. Currently only using 4 bottom, and side bearings hold the ring and allow it spin well, if the ring needs to increase in size, this may no longer work and I will need to increase the number of bearings supporting the ring.</p>
+
+    <div class="photogalleryup">
+      <div class="photoup2"><img src="images/MedusaDrivetrain.png"></div>
+      <div class="photoup2"><img src="images/casted.png"></div>
+
+    </div>
+    
+    <p class = "reg_paraup has-text-centered p-3"> The drivetrain uses 2 repeat mini brushed mk2 motors to power two wheels and then uses polyurethane belts to transmit power to the other two wheels (Not shown in CAD). The base of the wheels is made out of TPU and vytaflex will be cast around the TPU wheels to provide traction to them. The image above on the left shows the wheels without their vytaflex coating, while the image on the right shows what the wheels will look like when they are casted.The drivetrain was designed to be as compact as possible to allow for a smaller weapon.</p>
+    
+    <p class = "reg_paraup has-text-centered pt-3 pb-6"> Medusa will have a powerful motor that uses friction drive to power the ring. This subsystem is still being designed, but will be completed shortly.
+      
+    </p>
+
+      </section>
+    </div>
+
+
+
+
+<!--Footer-->
+<footer class="has-background-link">
+  <div class="content has-text-centered m-4">
+    <p>
+      Samantha Sedran Copyright &copy; 2025
+    </p>
+  </div>
+</footer>
+
+</body>

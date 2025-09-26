@@ -53,9 +53,9 @@
           </div>
           <div class="dropdown-menu" id="dropdown-menu4" role="menu">
             <div class="dropdown-content">
-              <div class="dropdown-item">
+              <!--<div class="dropdown-item">
                 <a href="roofba.html">Roofba - Praxis III</a>
-              </div>
+              </div>-->
               <div class="dropdown-item">
                 <a href="cnc.html">CNC Router</a>
               </div>
@@ -68,7 +68,7 @@
             </div>
           </div>
         </div>
-        <div class="navbar-item dropdown is-hoverable">
+        <!--<div class="navbar-item dropdown is-hoverable">
           <div class="dropdown-trigger">
             <div aria-haspopup="true" aria-controls="dropdown-menu4">
               <span>Research</span>
@@ -107,7 +107,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
@@ -136,11 +136,11 @@
         const navbarStart = menu.querySelector(".navbar-start");
         if (!navbarStart.querySelector(".navbar-item.project-link")) {
             const projects = [
+            { href: "medusa.html", text: "Medusa" },
             { href: "cnc.html", text: "CNC Router" },
             { href: "updraft.html", text: "Updraft" },
             { href: "captainweaver.html", text: "Captain Weaver" },
             { href: "civbridge.html", text: "Matboard Bridge" },
-            { href: "equitylab.html", text: "Equity Lab" },
             { href: "contact.html", text: "Contact" },
             ];
             projects.forEach((project) => {
@@ -294,18 +294,24 @@
                     <button class="button is-info">Mechanical Engineering Design</button>
                     <button class="button is-success">JavaScript</button>
                     <button class="button is-success">Java</button>
+                    <button class="button is-success">Python</button>
                     <button class="button is-success">R</button>
                     <button class="button is-success">C</button>
                     <button class="button is-success">MATLAB</button>
                     <button class="button is-primary">LTSpice</button>
                     <button class="button is-primary">SuperSpice</button>
                     <button class="button is-primary">Soldering</button>
+                    <button class="button is-primary">Eagle</button>
                     <button class="button is-warning">ROS</button>
                     <button class="button is-warning">Mujoco</button>
                     <button class="button is-warning">Mamba</button>
                     <button class="button is-warning">Conda</button>
                     <button class="button is-warning">Pixi</button>
-                    <button class="button is-warning">GitHub</button>
+                    <a href="https://github.com/sedran17" class="button is-warning" style="font-weight: normal;">
+                        GitHub
+                    </a>
+
+
                 </div>
 
     <!--Project-->
@@ -314,7 +320,7 @@
       <div class="photo">
             <a href="medusa.html">
                 <div class="image-container">
-                    <img src="images/cnc.png" alt="Image 1">
+                    <img src="images/MedusaPrototypeV1.png" alt="Image 1">
                 </div>
                 <div class="has-text-centered is-size-5">Medusa</div>
             </a>
@@ -334,7 +340,7 @@
 <div class="has-text-centered is-size-2 m-5 mt-6">Course Projects</div>
     <section class="photogallery">
       
-        <div class="photo">
+        <!--<div class="photo">
             <a href="roofba.html">
                 <div class="image-container">
                     <img src="images/roofba.jpg" alt="Image 1">
@@ -342,7 +348,7 @@
                 <div class="has-text-centered is-size-5">Roofba</div>
             </a>
             <p class="has-text-centered m-2">Robot designed to traverse roofs and clear debris</p>
-        </div>
+        </div>-->
         <div class="photo">
             <a href="cnc.html">
                 <div class="image-container">
@@ -366,7 +372,7 @@
         <div class="photo">
             <a href="civbridge.html">
                 <div class="image-container">
-                    <img src="images/building.jpg" alt="Image 4">
+                    <img src="images/bridgetest.png" alt="Image 4">
                 </div>
                 <div class="has-text-centered is-size-5">Matboard Bridge</div>
             </a>
@@ -375,7 +381,7 @@
     
     </section>
 
-    <div class="has-text-centered is-size-2 m-5 mt-6">Research</div>
+    <!--<div class="has-text-centered is-size-2 m-5 mt-6">Research</div>
     <section class="photogallery">
       
         <div class="photo">
@@ -389,7 +395,7 @@
         </div>
       
     </section>
-  </div>
+
 
   <div class="has-text-centered is-size-2 m-5 mt-6">Future Projects</div>
     <section class="photogallery">
@@ -424,6 +430,7 @@
       
     </section>
   </div>
+  </div>-->
 </section>
 
 
